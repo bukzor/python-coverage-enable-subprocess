@@ -73,7 +73,8 @@ from setuptools.command.install import install as orig_install
 PTH = '''\
 try:
     import coverage
-except ImportError:
+# coverage throws OSError when $PWD does not exist
+except (ImportError, OSError):
     pass
 else:
     coverage.process_startup()
@@ -123,7 +124,7 @@ def main():
     """the entry point"""
     setup(
         name=str('coverage_enable_subprocess'),
-        version='0',
+        version='1.0',
         url="https://github.com/bukzor/python-coverage-enable-subprocess",
         license="MIT",
         author="Buck Evan",
