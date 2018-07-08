@@ -125,7 +125,7 @@ def main():
     setup(
         name=str('coverage_enable_subprocess'),
         version='1.0',
-        url="https://github.com/bukzor/python-coverage-enable-subprocess",
+        url="https://github.com/bukzor/coverage_enable_subprocess",
         license="MIT",
         author="Buck Evan",
         author_email="buck.2019@gmail.com",
